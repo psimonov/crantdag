@@ -20,7 +20,9 @@ const devServerConfig = () => (config) => {
 module.exports = {
   webpack: override(
     addLessLoader({
-      javascriptEnabled: true,
+      lessOptions: {
+        javascriptEnabled: true,
+      },
     })
   ),
   devServer: overrideDevServer(

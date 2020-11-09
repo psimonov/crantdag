@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Home",
+    "key": "/"
+  },
+  {
+    "title": "Submenu",
+    "key": "/submenu",
+    "children": [
+      {
+        "title": "Submenu 1",
+        "key": "/submenu1"
+      },
+      {
+        "title": "Submenu 2",
+        "key": "/submenu2"
+      }
+    ]
+  },
+  {
+    "title": "Submenu empty",
+    "key": "/submenu_empty",
+    "children": []
+  },
+  {
+    "title": "Simple page",
+    "key": "/simplepage"
+  }
+]

@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './styles/main.sass';
+import './styles/antd.less';
 
-function App() {
+import React from 'react';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+
+import Error from './pages/Error';
+import Home from './pages/Home';
+import SimplePage from './pages/SimplePage';
+import SimplePageDetail from './pages/SimplePageDetail';
+import SubmenuDetail1 from './pages/SubmenuDetail1';
+import SubmenuDetail2 from './pages/SubmenuDetail2';
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact={true} path="/" component={Home} />
+        <Route path="/simplepage/:id" component={SimplePageDetail} />
+        <Route path="/simplepage" component={SimplePage} />
+        <Route path="/submenu/submenu1" component={SubmenuDetail1} />
+        <Route path="/submenu/submenu2" component={SubmenuDetail2} />
+        <Route component={Error} />
+      </Switch>
+    </Router>
   );
-}
+};
 
 export default App;
