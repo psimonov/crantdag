@@ -10,6 +10,7 @@
 * classnames
 * react-router-dom
 * prettier / lint-staged / husky
+* sass
 
 ### Commands used
 
